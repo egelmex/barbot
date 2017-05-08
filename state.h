@@ -20,8 +20,7 @@ struct state
 
 bool state_push(struct state *state, uint8_t data);
 bool state_pop(struct state *state, uint8_t *data);
-bool state_size(struct state *state);
-void state_init(struct state *state);
+size_t state_size(struct state *state);
 
 #define setNextState(nextState) state->next = nextState
 #define statePush(data) state_push(state, data)
